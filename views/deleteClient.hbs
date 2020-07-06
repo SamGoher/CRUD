@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+</head>
+<body>
+
+  <form>
+    <h3>CRUD Operations with MongoDB</h3>
+  </form>
+
+  <form>
+    <p>
+      <a href="/showClients"><h4>show clients</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/addClient"><h4>add client</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/editClient"><h4>edit client</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/deleteClient"><h4>delete client</h4></a>
+    </p>
+  </form>
+
+  <div id="d1">
+    <p> </p>
+  </div>
+
+  <style type="text/css">
+    #d1{
+      width: 100%;
+      text-align: center;
+      float: left;
+      background-color:black;
+      height: 0.05cm;
+    }
+  </style>
+
+  <h1>deleteClient</h1>
+
+  <main>
+    <form action="/deleteClient" method="POST">
+      id <input type="text" name="id"> <p></p>
+      <button type="submit">delete client</button>
+    </form>
+  </main>
+
+</body>
+</html>
