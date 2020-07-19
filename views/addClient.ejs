@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="../css/addClient.css"></link>
+  <title><%= title %></title>
 </head>
 <body>
 
@@ -39,19 +40,16 @@
     <p> </p>
   </div>
 
-  <style type="text/css">
-    #d1{
-      width: 100%;
-      text-align: center;
-      float: left;
-      background-color:black;
-      height: 0.05cm;
-    }
-  </style>
-
   <h1>addClient</h1>
   
-  <h1>...ClientAdded...</h1>
+  <main>
+    <form action="/addClient" method="POST">
+      name <input type="text" name="name"> <p></p>
+      age <input type="text" name="age"> <p></p>
+      email <input type="text" name="email"> <p></p>
+      <button type="submit">add client</button>
+    </form>
+  </main>
 
 </body>
 </html>

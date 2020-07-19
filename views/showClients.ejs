@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/showClients.css"></link>
+  <title><%= title %></title>
+</head>
+<body>
+
+  <form>
+    <h3>CRUD Operations with MongoDB</h3>
+  </form>
+
+  <form>
+    <p>
+      <a href="/showClients"><h4>show clients</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/addClient"><h4>add client</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/editClient"><h4>edit client</h4></a>
+    </p>
+  </form>
+
+  <form>
+    <p>
+      <a href="/deleteClient"><h4>delete client</h4></a>
+    </p>
+  </form>
+
+  <div id="d1">
+    <p> </p>
+  </div>
+
+
+  <h1>showClients</h1>
+  <h1>...</h1>
+  
+  <% if(!clientsData || clientsData == ``){ %>
+    <i>there is no clients data.</i>
+  <% } else { %>
+    <% for(let i = 0; i< clientsData.length; i++){ %>
+      <div id="d2">
+        <h3>
+          <p>id: <%= clientsData[i]._id %> </p>
+          <p>date: <%= clientsData[i].date %> </p>
+          <p>name: <%= clientsData[i].name %> </p>
+          <p>age: <%= clientsData[i].age %> </p>
+          <p>email: <%= clientsData[i].email %> </p>
+        </h3>
+      </div>
+      <% if(i % 2 == 0){ %>
+        <div id="d3">
+          <p></p>
+        </div>
+      <% }else { %>
+        <div id="d4">
+          <p></p>
+        </div>
+      <% } %>
+      
+    <% } %>
+  <% } %>
+
+</body>
+</html>

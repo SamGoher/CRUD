@@ -18,12 +18,11 @@ const port = process.env.PORT || 3000;
 dotenv.config({path: `./config/config.env`});
 
 
-
+app.use(express.static(`public`));
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.set(`views`, path.join(__dirname, `views`));
-app.engine(`hbs`, exphbs());
-app.set(`view engine`, `.hbs`);
+app.set(`view engine`, `ejs`);
 app.use(`/`, home);
 app.use(`/showClients`, showingClients);
 app.use(`/addClient`, addingClient);
